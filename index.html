@@ -83,7 +83,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* دکمه‌های ارتباطی */
+        /* دکمه‌های ارتباطی با رنگ استاندارد پیام‌رسان‌ها */
         .links-container {
             display: flex;
             flex-direction: column;
@@ -98,64 +98,61 @@
             padding: 16px 20px;
             border-radius: 18px;
             text-decoration: none;
-            color: var(--text-primary);
+            color: #ffffff;
+            font-weight: 600;
             transition: all 0.3s ease;
         }
 
-        /* پس‌زمینه آبی خام/مات برای تلگرام */
+        /* تلگرام - آبی استاندارد */
         .social-link.telegram {
-            background: rgba(22, 45, 68, 0.75);
-            border: 1px solid rgba(46, 110, 168, 0.5);
-            box-shadow: 0 4px 15px rgba(18, 38, 58, 0.4);
+            background-color: #229ED9;
+            box-shadow: 0 4px 15px rgba(34, 158, 217, 0.3);
         }
         .social-link.telegram:hover {
-            background: rgba(28, 58, 88, 0.9);
-            border-color: #3b82f6;
+            background-color: #1c8adb;
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(34, 158, 217, 0.5);
         }
 
-        /* پس‌زمینه سبز خام/مات برای واتس‌اپ */
+        /* واتس‌اپ - سبز استاندارد */
         .social-link.whatsapp {
-            background: rgba(18, 48, 32, 0.75);
-            border: 1px solid rgba(35, 100, 62, 0.5);
-            box-shadow: 0 4px 15px rgba(15, 40, 26, 0.4);
+            background-color: #25D366;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            color: #000000; /* متن تیره برای خوانایی بهتر روی سبز */
         }
         .social-link.whatsapp:hover {
-            background: rgba(24, 65, 43, 0.9);
-            border-color: #22c55e;
+            background-color: #20bd5a;
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
         }
 
-        /* پس‌زمینه بنفش خام/مات برای روبیکا */
+        /* روبیکا - سرخابی استاندارد */
         .social-link.rubika {
-            background: rgba(45, 20, 58, 0.75);
-            border: 1px solid rgba(95, 40, 120, 0.5);
-            box-shadow: 0 4px 15px rgba(35, 15, 45, 0.4);
+            background-color: #C82463;
+            box-shadow: 0 4px 15px rgba(200, 36, 99, 0.3);
         }
         .social-link.rubika:hover {
-            background: rgba(60, 26, 78, 0.9);
-            border-color: #a855f7;
+            background-color: #b01e55;
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(200, 36, 99, 0.5);
         }
 
         .social-link .inner {
             display: flex;
             align-items: center;
             gap: 12px;
-            font-size: 0.95rem;
-            font-weight: 500;
+            font-size: 1rem;
         }
 
         .social-link i.brand-icon {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             width: 24px;
             text-align: center;
-            color: var(--text-gold);
         }
 
         .arrow-icon {
-            font-size: 0.8rem;
-            color: var(--text-gold);
+            font-size: 0.85rem;
+            opacity: 0.8;
         }
 
         /* کارت‌های آدرس و تماس */
