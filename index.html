@@ -11,14 +11,13 @@
     
     <style>
         :root {
-            --bg-color: #0b0f17;
-            --card-bg: #151c28;
-            --card-border: #232d3f;
+            --bg-color: #121418;
+            --card-bg: #1c1f26;
+            --card-border: rgba(212, 175, 55, 0.2);
             --accent-gold: #d4af37;
-            --gold-gradient: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa7c11 100%);
+            --gold-gradient: linear-gradient(135deg, #f7e7ad 0%, #d4af37 50%, #a3791a 100%);
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
-            --badge-bg: rgba(212, 175, 55, 0.1);
         }
 
         * {
@@ -38,49 +37,37 @@
             align-items: center;
             padding: 24px 16px;
             background-image: 
-                radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+                radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 65%);
         }
 
         .container {
             width: 100%;
-            max-width: 580px;
+            max-width: 600px;
             background: var(--card-bg);
-            border: 1px solid var(--card-border);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 28px;
             padding: 36px 24px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
             text-align: center;
         }
 
-        .logo-box {
-            width: 90px;
-            height: 90px;
+        /* بخش لوگو */
+        .logo-container {
+            width: 130px;
+            height: 130px;
             margin: 0 auto 16px;
             border-radius: 50%;
+            padding: 4px;
             background: var(--gold-gradient);
-            padding: 2px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.25);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
         }
 
-        .logo-inner {
+        .logo-img {
             width: 100%;
             height: 100%;
-            background: #0b0f17;
+            object-fit: cover;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .logo-inner i {
-            font-size: 32px;
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            background-color: #ffffff;
         }
 
         h1 {
@@ -90,12 +77,11 @@
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: -0.5px;
         }
 
         .subtitle {
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             margin-bottom: 28px;
             font-weight: 400;
         }
@@ -106,101 +92,95 @@
             justify-content: center;
             gap: 8px;
             margin: 28px 0 16px;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: var(--accent-gold);
         }
 
-        /* لینک‌های شبکه‌های اجتماعی */
-        .links-container {
-            display: flex;
-            flex-direction: column;
+        /* کارت‌های دو تایی مثل نمونه */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 12px;
         }
 
+        @media (max-width: 520px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            padding: 18px 16px;
+            text-align: right;
+            transition: all 0.25s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-gold);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            line-height: 1.65;
+            margin-bottom: 12px;
+        }
+
+        /* دکمه‌های شبکه اجتماعی */
         .social-link {
             display: flex;
             align-items: center;
             justify-content: space-between;
             background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--card-border);
-            padding: 14px 20px;
-            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 14px 18px;
+            border-radius: 16px;
             text-decoration: none;
             color: var(--text-primary);
+            margin-bottom: 10px;
             transition: all 0.25s ease;
         }
 
         .social-link:hover {
             border-color: var(--accent-gold);
-            background: var(--badge-bg);
+            background: rgba(212, 175, 55, 0.08);
             transform: translateY(-2px);
         }
 
-        .social-link .left-content {
+        .social-link .inner {
             display: flex;
             align-items: center;
             gap: 12px;
-            font-weight: 500;
             font-size: 0.95rem;
+            font-weight: 500;
         }
 
-        .social-link i.brand-icon {
-            font-size: 1.4rem;
-            width: 28px;
+        .social-link i {
+            font-size: 1.3rem;
+            width: 24px;
             text-align: center;
         }
 
-        .telegram i { color: #2ea6da; }
-        .whatsapp i { color: #25d366; }
-        .rubika img { width: 22px; height: 22px; vertical-align: middle; }
-
-        .arrow-icon {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-        }
-
-        /* آدرس‌ها و تماس */
-        .cards-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .info-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--card-border);
-            border-radius: 20px;
-            padding: 18px 20px;
-            text-align: right;
-            transition: border-color 0.25s ease;
-        }
-
-        .info-card:hover {
-            border-color: rgba(212, 175, 55, 0.4);
-        }
-
-        .info-card-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--accent-gold);
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .info-card p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.7;
-            margin-bottom: 12px;
-        }
-
-        .phones-list {
+        /* شماره تماس‌ها */
+        .phones-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
             direction: ltr;
             justify-content: flex-end;
         }
@@ -209,26 +189,26 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: var(--badge-bg);
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.25);
             color: var(--accent-gold);
-            padding: 6px 14px;
+            padding: 6px 12px;
             border-radius: 12px;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-weight: 600;
             transition: all 0.2s ease;
         }
 
         .phone-btn:hover {
             background: var(--accent-gold);
-            color: #0b0f17;
+            color: #121418;
         }
 
         footer {
             margin-top: 32px;
             padding-top: 18px;
-            border-top: 1px solid var(--card-border);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
             font-size: 0.78rem;
             color: var(--text-secondary);
         }
@@ -237,77 +217,73 @@
 <body>
 
     <div class="container">
-        <!-- لوگو -->
-        <div class="logo-box">
-            <div class="logo-inner">
-                <i class="fa-solid fa-coins"></i>
-            </div>
+        <!-- لوگوی اصلی -->
+        <div class="logo-container">
+            <img src="logo.jpg" alt="زاهدان گلد" class="logo-img">
         </div>
 
-        <!-- عنوان اصلی -->
+        <!-- عناوین -->
         <h1>زاهدان گلد</h1>
-        <p class="subtitle">اطلاع‌رسانی نرخ لحظه‌ای طلا و آبشده</p>
+        <p class="subtitle">آبشده و سکه | اطلاع‌رسانی نرخ لحظه‌ای طلا</p>
 
-        <!-- کانال‌های ارتباطی -->
+        <!-- کانال‌ها -->
         <div class="section-header">
             <i class="fa-solid fa-share-nodes"></i>
             <span>کانال‌های اطلاع‌رسانی</span>
         </div>
 
-        <div class="links-container">
-            <a href="https://t.me/zahedangold" target="_blank" class="social-link telegram">
-                <div class="left-content">
-                    <i class="fa-brands fa-telegram brand-icon"></i>
-                    <span>کانال تلگرام</span>
-                </div>
-                <i class="fa-solid fa-chevron-left arrow-icon"></i>
-            </a>
+        <a href="https://t.me/zahedangold" target="_blank" class="social-link">
+            <div class="inner">
+                <i class="fa-brands fa-telegram" style="color: #2ea6da;"></i>
+                <span>کانال تلگرام زاهدان گلد</span>
+            </div>
+            <i class="fa-solid fa-chevron-left" style="font-size: 0.8rem; color: var(--text-secondary);"></i>
+        </a>
 
-            <a href="https://whatsapp.com/channel/0029VbDq92oJpe8obfxmN52x" target="_blank" class="social-link whatsapp">
-                <div class="left-content">
-                    <i class="fa-brands fa-whatsapp brand-icon"></i>
-                    <span>کانال واتس‌اپ</span>
-                </div>
-                <i class="fa-solid fa-chevron-left arrow-icon"></i>
-            </a>
+        <a href="https://whatsapp.com/channel/0029VbDq92oJpe8obfxmN52x" target="_blank" class="social-link">
+            <div class="inner">
+                <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
+                <span>کانال واتس‌اپ</span>
+            </div>
+            <i class="fa-solid fa-chevron-left" style="font-size: 0.8rem; color: var(--text-secondary);"></i>
+        </a>
 
-            <a href="https://rubika.ir/zahedangold" target="_blank" class="social-link rubika">
-                <div class="left-content">
-                    <i class="fa-solid fa-paper-plane brand-icon" style="color: #c82463;"></i>
-                    <span>کانال روبیکا</span>
-                </div>
-                <i class="fa-solid fa-chevron-left arrow-icon"></i>
-            </a>
-        </div>
+        <a href="https://rubika.ir/zahedangold" target="_blank" class="social-link">
+            <div class="inner">
+                <i class="fa-solid fa-paper-plane" style="color: #c82463;"></i>
+                <span>کانال روبیکا</span>
+            </div>
+            <i class="fa-solid fa-chevron-left" style="font-size: 0.8rem; color: var(--text-secondary);"></i>
+        </a>
 
-        <!-- دفاتر و شماره تماس -->
+        <!-- آدرس دفاتر -->
         <div class="section-header">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>دفاتر و شماره‌های تماس</span>
+            <i class="fa-solid fa-building-columns"></i>
+            <span>دفاتر ما</span>
         </div>
 
-        <div class="cards-grid">
-            <!-- دفتر مشهد -->
-            <div class="info-card">
-                <div class="info-card-header">
-                    <i class="fa-solid fa-building-columns"></i>
+        <div class="grid-2">
+            <!-- مشهد -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa-solid fa-location-dot"></i>
                     <span>دفتر مشهد</span>
                 </div>
                 <p>مجتمع طلا و جواهر مرمر، طبقه منفی ۱، پلاک ۲۸</p>
-                <div class="phones-list">
+                <div class="phones-container">
                     <a href="tel:05138554300" class="phone-btn"><i class="fa-solid fa-phone"></i> 051-38554300</a>
                     <a href="tel:05138548400" class="phone-btn"><i class="fa-solid fa-phone"></i> 051-38548400</a>
                 </div>
             </div>
 
-            <!-- دفتر زاهدان -->
-            <div class="info-card">
-                <div class="info-card-header">
-                    <i class="fa-solid fa-store"></i>
+            <!-- زاهدان -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa-solid fa-location-dot"></i>
                     <span>دفتر زاهدان</span>
                 </div>
                 <p>بازار طلا و جواهر حافظ، انتهای پاساژ مروارید</p>
-                <div class="phones-list">
+                <div class="phones-container">
                     <a href="tel:05434112203" class="phone-btn"><i class="fa-solid fa-phone"></i> 054-34112203</a>
                 </div>
             </div>
