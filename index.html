@@ -205,7 +205,40 @@
             margin-bottom: 12px;
         }
 
-        /* دکمه‌های شماره تماس */
+        /* دکمه‌های شماره تماس و مسیریابی */
+        .actions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .map-buttons {
+            display: flex;
+            gap: 6px;
+            justify-content: flex-start;
+        }
+
+        .map-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.78rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .map-btn:hover {
+            background: var(--text-gold);
+            color: #000000;
+            border-color: var(--text-gold);
+        }
+
         .phones-container {
             display: flex;
             flex-wrap: wrap;
@@ -269,14 +302,14 @@
             <a href="https://whatsapp.com/channel/0029VbDq92oJpe8obfxmN52x" target="_blank" class="social-link whatsapp">
                 <div class="inner">
                     <i class="fa-brands fa-whatsapp brand-icon"></i>
-                    <span>کانال واتس‌اپ</span>
+                    <span>کانال واتساپ</span>
                 </div>
                 <i class="fa-solid fa-chevron-left arrow-icon"></i>
             </a>
 
             <a href="https://rubika.ir/zahedangold" target="_blank" class="social-link rubika">
                 <div class="inner">
-                    <!-- لوگوی ۶ ضلعی روبیکا به رنگ مشکی خالص با شفافیت پس‌زمینه -->
+                    <!-- لوگوی ۶ ضلعی روبیکا -->
                     <svg class="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M50 5L88.9711 27.5V72.5L50 95L11.0289 72.5V27.5L50 5Z" stroke="#000000" stroke-width="8" stroke-linejoin="round"/>
                         <path d="M50 25L71.6506 37.5V62.5L50 75L28.3494 62.5V37.5L50 25Z" fill="#000000"/>
@@ -297,9 +330,16 @@
                     <span>دفتر مشهد</span>
                 </div>
                 <p>مجتمع طلا و جواهر مرمر، طبقه منفی ۱، پلاک ۲۸</p>
-                <div class="phones-container">
-                    <a href="tel:05138554300" class="phone-btn"><i class="fa-solid fa-phone"></i> 051-38554300</a>
-                    <a href="tel:05138548400" class="phone-btn"><i class="fa-solid fa-phone"></i> 051-38548400</a>
+                <div class="actions-container">
+                    <div class="map-buttons">
+                        <!-- لینک‌های نقشه مشهد (عبارت # را با لینک اصلی جایگزین کنید) -->
+                        <a href="#" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> گوگل مپ</a>
+                        <a href="#" target="_blank" class="map-btn"><i class="fa-solid fa-diamond-turn-right"></i> نشان</a>
+                    </div>
+                    <div class="phones-container">
+                        <a href="tel:05138554300" class="phone-btn"><i class="fa-solid fa-phone"></i> 051-38554300</a>
+                        <a href="tel:05138548400" class="phone-btn"><i class="fa-solid fa-phone"></i> 051-38548400</a>
+                    </div>
                 </div>
             </div>
 
@@ -310,8 +350,15 @@
                     <span>دفتر زاهدان</span>
                 </div>
                 <p>بازار طلا و جواهر حافظ، انتهای پاساژ مروارید</p>
-                <div class="phones-container">
-                    <a href="tel:05434112203" class="phone-btn"><i class="fa-solid fa-phone"></i> 054-34112203</a>
+                <div class="actions-container">
+                    <div class="map-buttons">
+                        <!-- لینک‌های نقشه زاهدان (عبارت # را با لینک اصلی جایگزین کنید) -->
+                        <a href="#" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> گوگل مپ</a>
+                        <a href="#" target="_blank" class="map-btn"><i class="fa-solid fa-diamond-turn-right"></i> نشان</a>
+                    </div>
+                    <div class="phones-container">
+                        <a href="tel:05434112203" class="phone-btn"><i class="fa-solid fa-phone"></i> 054-34112203</a>
+                    </div>
                 </div>
             </div>
         </div>
