@@ -2,159 +2,141 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101010">
-  <meta name="description" content="راه‌های ارتباطی و شبکه‌های اجتماعی زاهدان گلد">
-  <title>زاهدان گلد | Zahedan Gold</title>
-  <style>
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: Tahoma, Arial, sans-serif;
-      background: radial-gradient(ellipse at top, #332713 0%, #171510 35%, #0c0c0c 75%);
-      color: #f8f2e5;
-      display: flex;
-      justify-content: center;
-      padding: 38px 18px;
-    }
-
-    main {
-      width: 100%;
-      max-width: 440px;
-      text-align: center;
-    }
-
-    .logo {
-      width: 100px;
-      height: 100px;
-      margin: 0 auto 18px;
-      border: 2px solid #d9b66a;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: #e7c779;
-      font-size: 31px;
-      font-weight: bold;
-      letter-spacing: -2px;
-      box-shadow: 0 0 30px #c69c3922;
-    }
-
-    h1 {
-      color: #e7c779;
-      font-size: 27px;
-      margin: 0 0 8px;
-    }
-
-    .english {
-      color: #c6b78f;
-      font-size: 13px;
-      letter-spacing: 3px;
-      direction: ltr;
-    }
-
-    .intro {
-      color: #c3c0b8;
-      font-size: 14px;
-      line-height: 2;
-      margin: 20px 0 25px;
-    }
-
-    .links {
-      display: grid;
-      gap: 12px;
-    }
-
-    .link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 11px;
-      width: 100%;
-      min-height: 56px;
-      padding: 15px;
-      border: 1px solid #8f753d;
-      border-radius: 12px;
-      color: #f4e4bd;
-      background: linear-gradient(110deg, #282319, #191714);
-      text-decoration: none;
-      font-size: 15px;
-      transition: .2s;
-    }
-
-    .link:hover {
-      border-color: #f0d28a;
-      background: #352b19;
-      transform: translateY(-2px);
-    }
-
-    .symbol {
-      color: #e7c779;
-      font-size: 18px;
-    }
-
-    .section-title {
-      color: #d6bb7b;
-      font-size: 13px;
-      margin: 28px 0 13px;
-    }
-
-    footer {
-      color: #777268;
-      font-size: 11px;
-      margin-top: 32px;
-      line-height: 2;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0b0b">
+<meta name="description" content="راه‌های ارتباطی، آدرس شعب و شبکه‌های اجتماعی زاهدان گلد">
+<title>زاهدان گلد | Zahedan Gold</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  padding:30px 16px;
+  background:radial-gradient(ellipse at top,#302515,#11100d 48%,#080808);
+  color:#f6e8c2;
+  font-family:Tahoma,Arial,sans-serif;
+}
+main{max-width:460px;margin:auto;text-align:center}
+.logo{
+  width:92px;height:92px;margin:auto;
+  display:grid;place-items:center;border-radius:50%;
+  border:2px solid #d6b45e;color:#e6c675;
+  font-size:30px;font-weight:bold;
+  box-shadow:0 0 28px #d6b45e20
+}
+h1{font-size:27px;color:#e6c675;margin:18px 0 8px}
+.en{direction:ltr;letter-spacing:4px;color:#b9a16a;font-size:12px}
+.intro{color:#c9c3b5;line-height:2;font-size:14px;margin:18px 0 26px}
+.heading{color:#e6c675;font-size:14px;margin:27px 0 12px}
+.card{
+  text-align:right;background:#171510;
+  border:1px solid #554522;border-radius:14px;
+  padding:16px;margin:12px 0
+}
+.card h2{font-size:15px;color:#e6c675;margin:0 0 10px}
+.address{font-size:13px;line-height:2;color:#e2ded4}
+.actions{display:flex;gap:8px;margin-top:12px}
+.btn{
+  flex:1;display:block;text-align:center;
+  padding:12px 8px;border-radius:9px;
+  text-decoration:none;font-size:13px;
+  background:#2b2416;color:#f7e7bb;
+  border:1px solid #80672f
+}
+.btn.primary{background:#d6b45e;color:#17130a;font-weight:bold}
+.social{
+  display:flex;align-items:center;gap:12px;
+  text-decoration:none;color:#f6e8c2;
+  border:1px solid #554522;background:#171510;
+  border-radius:12px;padding:15px;margin:10px 0;
+  text-align:right
+}
+.social .symbol{
+  width:38px;height:38px;flex-shrink:0;
+  display:grid;place-items:center;
+  border-radius:10px;background:#302719;
+  color:#e6c675;font-size:19px
+}
+.social strong{display:block;font-size:14px;margin-bottom:5px}
+.social small{color:#aaa18c;font-size:11px}
+footer{color:#777064;font-size:11px;margin-top:28px;line-height:2}
+</style>
 </head>
 <body>
-  <main>
-    <div class="logo">ZG</div>
+<main>
+  <div class="logo">ZG</div>
+  <h1>زاهدان گلد</h1>
+  <div class="en">ZAHEDAN GOLD</div>
+  <p class="intro">
+    به صفحه ارتباطی زاهدان گلد خوش آمدید<br>
+    آدرس شعب، شماره‌های تماس و شبکه‌های اجتماعی
+  </p>
 
-    <h1>زاهدان گلد</h1>
-    <div class="english">ZAHEDAN GOLD</div>
+  <div class="heading">آدرس شعب</div>
 
-    <p class="intro">
-      به صفحه رسمی ارتباط با زاهدان گلد خوش آمدید.
-      <br>
-      تمام راه‌های ارتباطی در یک مکان.
-    </p>
-
-    <div class="links">
-      <a class="link" href="tel:YOUR_PHONE">
-        <span class="symbol">☎</span>
-        تماس تلفنی
-      </a>
-
-      <a class="link" href="https://wa.me/YOUR_WHATSAPP">
-        <span class="symbol">◉</span>
-        ارتباط در واتساپ
-      </a>
-
-      <a class="link" href="https://t.me/YOUR_TELEGRAM">
-        <span class="symbol">➤</span>
-        کانال و ارتباط تلگرام
-      </a>
-
-      <a class="link" href="https://instagram.com/YOUR_INSTAGRAM">
-        <span class="symbol">◎</span>
-        صفحه اینستاگرام
-      </a>
-
-      <div class="section-title">آدرس و موقعیت مکانی</div>
-
-      <a class="link" href="YOUR_MAP_LINK">
-        <span class="symbol">⌖</span>
-        مشاهده موقعیت روی نقشه
-      </a>
+  <section class="card">
+    <h2>📍 شعبه مشهد</h2>
+    <div class="address">
+      مجتمع طلا و جواهر مرمر<br>
+      طبقه منفی یک، پلاک ۲۸
     </div>
+    <div class="actions">
+      <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=مجتمع+طلا+و+جواهر+مرمر+مشهد">مسیریابی</a>
+      <a class="btn" href="tel:+985138554300">تماس با شعبه</a>
+    </div>
+  </section>
 
-    <footer>
-      Zahedan Gold<br>
-      © تمام حقوق محفوظ است.
-    </footer>
-  </main>
+  <section class="card">
+    <h2>📍 شعبه زاهدان</h2>
+    <div class="address">
+      بازار طلا و جواهر حافظ<br>
+      انتهای پاساژ مروارید
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=بازار+طلا+و+جواهر+حافظ+زاهدان">مسیریابی</a>
+      <a class="btn" href="tel:+985434112203">تماس با شعبه</a>
+    </div>
+  </section>
+
+  <div class="heading">شماره‌های تماس</div>
+
+  <a class="social" href="tel:+985138554300">
+    <span class="symbol">☎</span>
+    <span><strong>۰۵۱-۳۸۵۵۴۳۰۰</strong><small>تماس با دفتر مشهد</small></span>
+  </a>
+
+  <a class="social" href="tel:+985138548400">
+    <span class="symbol">☎</span>
+    <span><strong>۰۵۱-۳۸۵۴۸۴۰۰</strong><small>تماس با دفتر مشهد</small></span>
+  </a>
+
+  <a class="social" href="tel:+985434112203">
+    <span class="symbol">☎</span>
+    <span><strong>۰۵۴-۳۴۱۱۲۲۰۳</strong><small>تماس با دفتر زاهدان</small></span>
+  </a>
+
+  <div class="heading">ما را در شبکه‌های اجتماعی دنبال کنید</div>
+
+  <a class="social" href="https://t.me/zahedangold" target="_blank" rel="noopener noreferrer">
+    <span class="symbol">➤</span>
+    <span><strong>کانال تلگرام</strong><small>مشاهده کانال رسمی</small></span>
+  </a>
+
+  <a class="social" href="https://whatsapp.com/channel/0029VbDq92oJpe8obfxmN52x" target="_blank" rel="noopener noreferrer">
+    <span class="symbol">◉</span>
+    <span><strong>کانال واتساپ</strong><small>دنبال کردن کانال</small></span>
+  </a>
+
+  <a class="social" href="https://rubika.ir/zahedangold" target="_blank" rel="noopener noreferrer">
+    <span class="symbol">◆</span>
+    <span><strong>صفحه روبیکا</strong><small>مشاهده صفحه رسمی</small></span>
+  </a>
+
+  <footer>
+    زاهدان گلد | Zahedan Gold<br>
+    © تمامی حقوق محفوظ است.
+  </footer>
+</main>
 </body>
 </html>
